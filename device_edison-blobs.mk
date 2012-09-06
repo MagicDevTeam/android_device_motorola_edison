@@ -46,12 +46,20 @@ PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/usr/keychars/omap4-keypad.kcm:system/usr/keychars/omap4-keypad.kcm \
     device/motorola/edison/prebuilt/usr/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
     device/motorola/edison/prebuilt/usr/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
+    device/motorola/edison/prebuilt/usr/keychars/kbd_br_abnt2.kcm:system/usr/keychars/kbd_br_abnt2.kcm \
+    device/motorola/edison/prebuilt/usr/keychars/kbd_ca_fr.kcm:system/usr/keychars/kbd_ca_fr.kcm \
+    device/motorola/edison/prebuilt/usr/keychars/kbd_latam_basic.kcm:system/usr/keychars/kbd_latam_basic.kcm \
+    device/motorola/edison/prebuilt/usr/keychars/kbd_us_basic.kcm:system/usr/keychars/kbd_us_basic.kcm \
+    device/motorola/edison/prebuilt/usr/keychars/kbd_us_intl.kcm:system/usr/keychars/kbd_us_intl.kcm \
     device/motorola/edison/prebuilt/usr/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/motorola/edison/prebuilt/usr/keylayout/cpcap-key.kl:system/usr/keylayout/cpcap-key.kl \
     device/motorola/edison/prebuilt/usr/keylayout/cy8c201xx.kl:system/usr/keylayout/cy8c201xx.kl \
     device/motorola/edison/prebuilt/usr/keylayout/evfwd.kl:system/usr/keylayout/evfwd.kl \
     device/motorola/edison/prebuilt/usr/keylayout/omap4-keypad.kl:system/usr/keylayout/omap4-keypad.kl \
     device/motorola/edison/prebuilt/usr/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/motorola/edison/prebuilt/usr/keylayout/atmxt-i2c.kl:system/usr/keylayout/atmxt-i2c.kl \
+    device/motorola/edison/prebuilt/usr/keylayout/usb_keyboard_102_en_us.kl:system/usr/keylayout/usb_keyboard_102_en_us.kl \
+    device/motorola/edison/prebuilt/usr/keylayout/Vendor_22b8_Product_0938.kl:system/usr/keylayout/Vendor_22b8_Product_0938.kl \
     device/motorola/edison/prebuilt/bin/battd:system/bin/battd \
     device/motorola/edison/prebuilt/bin/mount_ext3.sh:system/bin/mount_ext3.sh \
     device/motorola/edison/prebuilt/bin/strace:system/bin/strace \
