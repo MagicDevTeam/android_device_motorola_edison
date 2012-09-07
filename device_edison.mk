@@ -105,8 +105,8 @@ PRODUCT_PACKAGES += \
     Superuser \
     su \
     DockAudio \
-    Camera 
-   # camera_test \
+    Camera \
+    camera_test \
    # OMAPCamera 
 
 
