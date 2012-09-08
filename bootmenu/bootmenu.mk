@@ -22,12 +22,10 @@ PRODUCT_COPY_FILES += \
 # init.rc profiles
 PRODUCT_COPY_FILES += \
 	${bm_device}/bootmenu/profiles/cm/init.rc:system/bootmenu/2nd-init/init.rc \
-	${bm_device}/bootmenu/profiles/cm/init.mapphone_cdma.rc:system/bootmenu/2nd-init/init.mapphone_cdma.rc \
 	${bm_device}/bootmenu/profiles/cm/init.mapphone_umts.rc:system/bootmenu/2nd-init/init.mapphone_umts.rc \
 	${bm_device}/bootmenu/profiles/cm/init.trace.rc:system/bootmenu/2nd-init/init.trace.rc \
 	${bm_device}/bootmenu/profiles/cm/init.usb.rc:system/bootmenu/2nd-init/init.usb.rc \
 	${bm_device}/bootmenu/profiles/cm/ueventd.rc:system/bootmenu/2nd-init/ueventd.rc	\
-	${bm_device}/bootmenu/profiles/cm/ueventd.mapphone_cdma.rc:system/bootmenu/2nd-init/ueventd.mapphone_cdma.rc \
 	${bm_device}/bootmenu/profiles/cm/ueventd.mapphone_umts.rc:system/bootmenu/2nd-init/ueventd.mapphone_umts.rc \
 	${bm_device}/bootmenu/profiles/cm/init:system/bootmenu/2nd-init/init \
 	${bm_device}/bootmenu/profiles/cm/default.prop:system/bootmenu/2nd-init/default.prop \
@@ -37,12 +35,10 @@ PRODUCT_COPY_FILES += \
 # init.rc profiles to make ramdisk.img
 PRODUCT_COPY_FILES += \
 	${bm_device}/bootmenu/profiles/cm/init.rc:root/init.rc \
-	${bm_device}/bootmenu/profiles/cm/init.mapphone_cdma.rc:root/init.mapphone_cdma.rc \
 	${bm_device}/bootmenu/profiles/cm/init.mapphone_umts.rc:root/init.mapphone_umts.rc \
 	${bm_device}/bootmenu/profiles/cm/init.trace.rc:root/init.trace.rc \
 	${bm_device}/bootmenu/profiles/cm/init.usb.rc:root/init.usb.rc \
 	${bm_device}/bootmenu/profiles/cm/ueventd.rc:root/ueventd.rc	\
-	${bm_device}/bootmenu/profiles/cm/ueventd.mapphone_cdma.rc:root/ueventd.mapphone_cdma.rc \
 	${bm_device}/bootmenu/profiles/cm/ueventd.mapphone_umts.rc:root/ueventd.mapphone_umts.rc \
 	${bm_device}/bootmenu/profiles/cm/default.prop:root/default.prop \
 	${bm_device}/bootmenu/profiles/cm/usbcheck.sh:root/usbcheck.sh 

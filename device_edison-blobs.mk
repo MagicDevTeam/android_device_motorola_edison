@@ -86,7 +86,7 @@ PRODUCT_COPY_FILES += \
     
 
 PRODUCT_COPY_FILES += \
-    device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin.bin \
+    device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-mr.bin \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-plt.bin \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin:/system/etc/firmware/ti-connectivity/wl127x-fw-4-sr.bin \
     device/motorola/edison/prebuilt/etc/firmware/ti-connectivity/wl128x-fw-4-mr.bin:/system/etc/firmware/ti-connectivity/wl128x-fw-4-mr.bin \
@@ -120,10 +120,4 @@ PRODUCT_COPY_FILES += \
     device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so \
     device/motorola/edison/prebuilt/lib/libOMX_Core.so:/system/lib/libOMX_Core.so \
     
-    
-    # copy all kernel modules under the "modules" directory to system/lib/modules
-PRODUCT_COPY_FILES += $(shell \
-    find device/motorola/edison/modules -name '*.ko' \
-    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-    | tr '\n' ' ')
 

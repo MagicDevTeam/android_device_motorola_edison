@@ -65,9 +65,11 @@ PRODUCT_PACKAGES += \
 #    wlan_cu \
 #    tiwlan.ini
 PRODUCT_PACKAGES += \
+    lib_driver_cmd_wl12xx \
     dhcpcd.conf \
     hostapd.conf \
     wifical.sh \
+    wpa_supplicant.conf \
     TQS_D_1.7.ini \
     TQS_D_1.7_127x.ini \
     crda \
@@ -77,8 +79,8 @@ PRODUCT_PACKAGES += \
 
 # Wifi Direct
 PRODUCT_PACKAGES += \
-    ti_wfd_libs
-    
+    ti_wfd_libs \
+    ti-wpan-fw
     #lib_driver_cmd_wl12xx \
     #wpa_supplicant.conf \
 
@@ -107,8 +109,7 @@ PRODUCT_PACKAGES += \
     DockAudio \
     Camera \
     camera_test \
-   # OMAPCamera 
-
+    CameraOMAP4 
 
 PRODUCT_PACKAGES += \
     librs_jni \
@@ -149,9 +150,9 @@ PRODUCT_COPY_FILES += $(shell test -d vendor/motorola/edison/lib/modules &&  \
 	-printf '%p:system/lib/modules/%f ')
 
 # copy all others kernel modules under the "modules" directory to system/lib/modules
-PRODUCT_COPY_FILES += $(shell test -d device/motorola/edison/modules && \
-	find device/motorola/edison/modules -name '*.ko' \
-	-printf '%p:system/lib/modules/%f ')
+#PRODUCT_COPY_FILES += $(shell test -d device/motorola/edison/modules && \
+#	find device/motorola/edison/modules -name '*.ko' \
+#	-printf '%p:system/lib/modules/%f ')
 
 
     
