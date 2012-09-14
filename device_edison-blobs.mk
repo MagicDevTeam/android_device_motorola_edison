@@ -109,15 +109,15 @@ PRODUCT_COPY_FILES += \
 
 # Temporarily use prebuilt DOMX
 # Prebuilts /system/lib
-PRODUCT_COPY_FILES += \
-    device/motorola/edison/prebuilt/lib/libdomx.so:/system/lib/libdomx.so \
-    device/motorola/edison/prebuilt/lib/libmm_osal.so:/system/lib/libmm_osal.so \
-    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.MISC.SAMPLE.so:/system/lib/libOMX.TI.DUCATI1.MISC.SAMPLE.so \
-    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.CAMERA.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.CAMERA.so \
-    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.secure.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.secure.so \
-    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so \
-    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so \
-    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so \
-    device/motorola/edison/prebuilt/lib/libOMX_Core.so:/system/lib/libOMX_Core.so \
+#PRODUCT_COPY_FILES += \
+#    device/motorola/edison/prebuilt/lib/libdomx.so:/system/lib/libdomx.so \
+#    device/motorola/edison/prebuilt/lib/libmm_osal.so:/system/lib/libmm_osal.so \
+#    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.MISC.SAMPLE.so:/system/lib/libOMX.TI.DUCATI1.MISC.SAMPLE.so \
+#    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.CAMERA.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.CAMERA.so \
+#    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.secure.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.secure.so \
+#    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.DECODER.so \
+#    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.H264E.so \
+#    device/motorola/edison/prebuilt/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so:/system/lib/libOMX.TI.DUCATI1.VIDEO.MPEG4E.so \
+#    device/motorola/edison/prebuilt/lib/libOMX_Core.so:/system/lib/libOMX_Core.so \
     
 
