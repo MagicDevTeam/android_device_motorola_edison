@@ -16,6 +16,7 @@
 # all OMAP4 devices.
 
 PRODUCT_PACKAGES := \
+        libdrmdecrypt \
 	libstagefrighthw \
         libI420colorconvert \
 	libtiutils \
@@ -26,6 +27,7 @@ PRODUCT_PACKAGES := \
 	smc_pa_ctrl \
 	tf_daemon \
 	libdomx \
+	libtf_crypto_sst \
 	libOMX_Core \
 	libOMX.TI.DUCATI1.VIDEO.H264E \
 	libOMX.TI.DUCATI1.VIDEO.MPEG4E \
