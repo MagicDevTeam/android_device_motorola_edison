@@ -104,8 +104,8 @@ PRODUCT_COPY_FILES += \
 
 # prebuilt hwc
 PRODUCT_COPY_FILES += \
-    device/motorola/edison/hwc/hwcomposer.edison.so:system/vendor/lib/hw/hwcomposer.edison.so \
-    device/motorola/edison/hwc/libedid.so:system/lib/libedid.so    
+    device/motorola/edison/hwc/libedid.so:system/lib/libedid.so
+    #device/motorola/edison/hwc/hwcomposer.edison.so:system/vendor/lib/hw/hwcomposer.edison.so \
 
 # Temporarily use prebuilt DOMX
 # Prebuilts /system/lib
