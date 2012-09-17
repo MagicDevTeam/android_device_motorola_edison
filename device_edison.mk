@@ -93,7 +93,8 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    bt_sco_app 
+    bt_sco_app \
+    BluetoothSCOApp 
     #uim-sysfs 
 
 # Release utilities
@@ -131,6 +132,10 @@ PRODUCT_PACKAGES += \
     Gallery2 \
     FileExplorer
 
+PRODUCT_PACKAGES += \
+    TIInit_7.2.31.bts \
+    TIInit_7.6.15.bts
+    
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -168,7 +173,7 @@ PRODUCT_COPY_FILES += \
 # stuff specific to ti OMAP4 hardware
 #$(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
 $(call inherit-product, device/motorola/edison/omap4.mk)
-$(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
+#$(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
 
 
 $(call inherit-product, device/motorola/edison/device_edison-blobs.mk)
