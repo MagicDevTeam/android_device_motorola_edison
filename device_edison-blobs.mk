@@ -81,8 +81,8 @@ PRODUCT_COPY_FILES += \
 
     
 PRODUCT_COPY_FILES += \
-    device/motorola/edison/prebuilt/lib/libwtnativetask.so:system/lib/libwtnativetask.so \
-    device/motorola/edison/prebuilt/lib/camera.omap4.so:system/lib/hw/camera.omap4.so \
+    device/motorola/edison/prebuilt/lib/libwtnativetask.so:system/lib/libwtnativetask.so
+    #device/motorola/edison/prebuilt/lib/camera.omap4.so:system/lib/hw/camera.omap4.so \
     
 
 PRODUCT_COPY_FILES += \

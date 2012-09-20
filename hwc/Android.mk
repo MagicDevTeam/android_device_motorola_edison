@@ -23,6 +23,6 @@ LOCAL_C_INCLUDES += external/libpng external/zlib
 LOCAL_SHARED_LIBRARIES += libedid
 
 # LOG_NDEBUG=0 means verbose logging enabled
-# LOCAL_CFLAGS += -DLOG_NDEBUG=0
+LOCAL_CFLAGS += -DLOG_NDEBUG=0
 include $(BUILD_SHARED_LIBRARY)
 endif
