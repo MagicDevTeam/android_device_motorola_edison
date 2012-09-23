@@ -9,6 +9,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/motorola/edison/overlay/cm
 
+
 #
 # Setup device specific product configuration.
 #
@@ -18,8 +19,12 @@ PRODUCT_DEVICE := edison
 PRODUCT_DEVICE_PREFIX := umts
 PRODUCT_MODEL := MB865
 PRODUCT_MANUFACTURER := Motorola
+ifeq ($(PRODUCT_TARGET_CN_BUILDING),true)
+PRODUCT_SFX := CN
+else
 PRODUCT_SFX := ATT
-ANDROID_VERSION := 4.1.1_r3
+endif
+ANDROID_VERSION := 4.1.1_r4
 #MOTOROLA_BUILD_ID := 6.7.1-68_DHD-15_M4-16
 MOTOROLA_BUILD_ID := JRO03C
 MOTOROLA_SOFTWARE_VERSION := 6.14.84

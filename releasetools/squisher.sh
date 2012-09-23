@@ -22,3 +22,16 @@ cp -f $ANDROID_BUILD_TOP/device/motorola/edison/updater-script $REPACK/ota/META-
 #fi
 
 #cp -f $ANDROID_BUILD_TOP/out/target/product/edison/root/init $REPACK/ota/system/bootmenu/2nd-init/init
+
+rm -f $REPACK/ota/system/app/Gallery2.apk
+cp -f $ANDROID_BUILD_TOP/device/motorola/edison/prebuilt/app/Gallery2.apk $REPACK/ota/system/app
+
+cp -f $ANDROID_BUILD_TOP/device/motorola/edison/prebuilt/Camera/Camera360_3.6.apk $REPACK/ota/system/app
+cp -f $ANDROID_BUILD_TOP/device/motorola/edison/prebuilt/Camera/lib/* $REPACK/ota/system/lib
+
+rm -f $REPACK/ota/system/app/Superuser.apk
+cp -f $ANDROID_BUILD_TOP/device/motorola/edison/prebuilt/app/SuperSU.apk $REPACK/ota/system/app
+
+rm -f $REPACK/ota/system/xbin/su
+cp -f $ANDROID_BUILD_TOP/device/motorola/edison/prebuilt/bin/su $REPACK/ota/system/xbin
+

@@ -158,7 +158,7 @@ set_perm_recursive(0, 2000, 0755, 0755, "/system/xbin");
 set_perm(0, 0, 06755, "/system/xbin/librank");
 set_perm(0, 0, 06755, "/system/xbin/procmem");
 set_perm(0, 0, 06755, "/system/xbin/procrank");
-set_perm(0, 0, 06755, "/system/xbin/su");
+set_perm(0, 0, 06777, "/system/xbin/su");
 set_perm(0, 2000, 0755, "/system/vendor");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/vendor/bin");
 set_perm_recursive(0, 2000, 0755, 0644, "/system/vendor/etc");

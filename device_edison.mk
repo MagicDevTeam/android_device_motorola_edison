@@ -2,6 +2,8 @@
 # This is the product configuration for a full edison
 #
 
+-include device/motorola/edison/BuildConfig.mk
+
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
@@ -132,9 +134,9 @@ PRODUCT_PACKAGES += \
     Gallery2 \
     FileExplorer
 
-PRODUCT_PACKAGES += \
-    TIInit_7.2.31.bts \
-    TIInit_7.6.15.bts
+#PRODUCT_PACKAGES += \
+#    TIInit_7.2.31.bts \
+#    TIInit_7.6.15.bts
     
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -176,6 +178,7 @@ $(call inherit-product, device/motorola/edison/omap4.mk)
 #$(call inherit-product, hardware/ti/wpan/ti-wpan-products.mk)
 
 
+
 $(call inherit-product, device/motorola/edison/device_edison-blobs.mk)
 
 $(call inherit-product, device/motorola/edison/bootmenu/bootmenu.mk)
@@ -183,6 +186,16 @@ $(call inherit-product, device/motorola/edison/bootmenu/bootmenu.mk)
 #$(call inherit-product-if-exists, vendor/verizon/edison-leak-verizon-vendor.mk)
 #$(call inherit-product-if exists, device/ti/proprietary-open/wl12xx/wlan/wl12xx-wlan-fw-products.mk)
 $(call inherit-product-if-exists, vendor/motorola/edison/edison-vendor.mk)
+
+
+#ifeq ($(PRODUCT_TARGET_CN_BUILDING),true)
+#$(call inherit-product-if-exists, vendor/motorola/edison/ducati-full_moto_edison_cn.mk)
+#$(call inherit-product-if-exists, vendor/motorola/edison/edison-vendor-blobs_cn.mk)
+#else
+#$(call inherit-product-if-exists, vendor/motorola/edison/ducati-full_moto_edison.mk)
+#$(call inherit-product-if-exists, vendor/motorola/edison/edison-vendor-blobs.mk)
+#endif
+
 
 $(call inherit-product-if-exists, vendor/google/gapps.mk)
 
