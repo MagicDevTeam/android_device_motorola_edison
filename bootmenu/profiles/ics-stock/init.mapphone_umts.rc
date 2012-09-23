@@ -24,7 +24,7 @@ on init
     mkdir /preinstall 0771 system system
 
     mkdir /cdrom 0770 system system
-
+    mkdir /data/tmp 0777 system system
     symlink /data/tmp /tmp
 
 # Mount Points for External Storage Devices

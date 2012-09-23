@@ -12,9 +12,6 @@ on init
     exec /sbin/fixboot.sh
     
     export DOWNLOAD_CACHE /cache/download
-    #export SD_EXT_DIRECTORY /sd-ext
-    #export SECONDARY_STORAGE /mnt/sdcard-ext
-    #export EXTERNAL_ALT_STORAGE /mnt/sdcard-ext # Feature 34534
     mkdir /mnt/sdcard-ext 0000 system system # Feature 34534
     symlink /mnt/sdcard-ext /sdcard-ext # Feature 34534
 
@@ -998,25 +995,6 @@ service dund_dialup /system/bin/dund --listen --channel=6 --nodetach --dialup
 service cdromversion /system/bin/logwrapper /system/bin/mount_cdrom.sh /dev/block/cdrom
     class core
     oneshot
-# Backup/Restore Feature
-on property:mot.backup_restore.status="Finished"
-    start zygote
-#service mot_backup /system/bin/logwrapper /system/xbin/run_backup /system/etc/backup_targets.csv
-#    disabled
-#    user root
-#    oneshot
-#service mot_restore /system/bin/logwrapper /system/xbin/run_restore /system/etc/backup_targets.csv
-#    disabled
-#    user root
-#    oneshot
-#on property:mot.backup_restore.action="run_backup"
-#    setprop mot.backup_restore.status "Running"
-#    stop zygote
-#    start mot_backup
-#on property:mot.backup_restore.action="run_restore"
-#    setprop mot.backup_restore.status "Running"
-#    stop zygote
-#    start mot_restore
 service secclkd /system/bin/secclkd
     class main
     socket secclk_socket stream 660 mot_secclkd mot_secclkd
@@ -1040,18 +1018,6 @@ on property:persist.factory.allow_adb=0
 service vpnclientpm /system/bin/vpnclientpm
     class main
     user root
-#service loadpreinstalls /system/bin/logwrapper /system/bin/loadpreinstalls.sh
-#    class main
-#    user system
-#    group system
-#    disabled
-#    oneshot
-#IKCBS-229 start RescueStarter for MobileRescue
-#service RescueStarter /system/bin/RescueStarter
-#    user graphics
-#    group input graphics
-#    class main
-# auEmail provisioning daemon
 service aepls001 /system/bin/aepls001
     class main
     socket aepls001 stream 0666 system system
