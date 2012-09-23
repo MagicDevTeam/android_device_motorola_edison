@@ -1,0 +1,2 @@
+
+PRODUCT_TARGET_CN_BUILDING := false
