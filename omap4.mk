@@ -35,5 +35,6 @@ PRODUCT_PACKAGES := \
 	libOMX.TI.DUCATI1.VIDEO.CAMERA \
 	libOMX.TI.DUCATI1.MISC.SAMPLE \
 	hwcomposer.edison \
+	hwcomposer.p3 \
 	camera.omap4 \
 	hwcomposer.omap4 \

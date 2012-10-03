@@ -1,4 +1,4 @@
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),edison)
+#ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),edison)
 
 
 # reset our local path
@@ -16,5 +16,5 @@ LOCAL_MODULE_PATH := $(PRODUCT_OUT)/system/bootmenu/binary
 
 include $(BUILD_EXECUTABLE)
 
-endif #TARGET_BOOTLOADER_BOARD_NAME
+#endif #TARGET_BOOTLOADER_BOARD_NAME
 

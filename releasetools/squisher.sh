@@ -3,7 +3,7 @@
 
 # Delete unwanted apps
 rm -f $REPACK/ota/system/app/RomManager.apk
-mv -f $REPACK/ota/system/vendor/lib/hw/hwcomposer.omap4.so $REPACK/ota/system/vendor/lib/hw/hwcomposer.omap4.so.bak
+#mv -f $REPACK/ota/system/vendor/lib/hw/hwcomposer.omap4.so $REPACK/ota/system/vendor/lib/hw/hwcomposer.omap4.so.bak
 #rm -f $REPACK/ota/system/app/FM.apk
 #rm -f $REPACK/ota/system/xbin/irssi
 
@@ -34,4 +34,18 @@ cp -f $ANDROID_BUILD_TOP/device/motorola/edison/prebuilt/app/SuperSU.apk $REPACK
 
 rm -f $REPACK/ota/system/xbin/su
 cp -f $ANDROID_BUILD_TOP/device/motorola/edison/prebuilt/bin/su $REPACK/ota/system/xbin
+
+
+
+if cat $ANDROID_BUILD_TOP/device/motorola/edison/BuildConfig.mk | grep "PRODUCT_TARGET_CN_BUILDING" | grep "true" ; then
+    echo "==== add CN prop ====="
+    cat $ANDROID_BUILD_TOP/device/motorola/edison/system_cn-add.prop >> $REPACK/ota/system/build.prop
+fi   
+
+
+
+
+
+
+
 
