@@ -1,0 +1,50 @@
+
+# 
+# CN add
+#
+# BEGIN Mootorola IKAROWANA-4011, a21746
+persist.sys.poweroff.alarm=true
+#indicating if power off alarm is locked as active one
+persist.sys.po.alarm.flag=false
+#Enable Headset Hook LongPress to lanch next song when music playing
+ro.mot.music.hs.lp.flag=true
+
+# BEGIN Motorola rdh768 07-Mar-2012 IKCNDEVICS-2347
+# Indicating the internal sdcard mount type in recovery mode
+# 0 there is no internal sdcard
+# 1 the mount point for internal sdcard is /sdcard
+# 2 the mount point for internal sdcard is /emstorage (umts spyder)
+ro.mot.emmcsdcard.recoverytype=0
+# END IKCNDEVICS-2347
+
+# BEGIN Motorola a22103 21-Mar-2012 IKCNDEVICS-3395
+# Simulate sdcard on /data/media
+persist.fuse_sdcard=true
+# END IKCNDEVICS-3395
+
+# Motorola a18540 IKCNDEVICS-3404
+ro.mot.fuse.preserve=400
+
+#switcher for allowing the volume key(up&down) to wakeup phone
+persist.mot.volumekey.wakeup=0
+
+# BEGIN Motorola, cfm876, 04/25/2012, IKCNDEVICS-5251
+#Indicating the automatic birghtness mode
+#0 brigth
+#1 normal
+#2 dim
+#2 dimmer
+persist.mot.autobrightmode=1
+# END IKCNDEVICS-5251
+
+persist.sys.strictmode.disable=true
+ro.product.contacts.minmatch=10
+
+
+
+
+
+
+
+
+
