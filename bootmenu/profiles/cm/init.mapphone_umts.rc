@@ -72,6 +72,10 @@ on post-fs
     
     mount ext3 /dev/block/mmcblk1p21 /system ro noatime nodiratime remount
     
+    mount tmpfs tmpfs /tmp
+    
+# Backward compatibility
+    symlink /dev /dev/netmux
     symlink /dev/ttyGS0 /dev/acm0
     
 # Busybox
@@ -82,6 +86,18 @@ on post-fs
   
 # Other global env variables
     export DSP_PATH /system/lib/dsp
+    
+    
+    #change permissions on vmallocinfo so we can grab it from bugreports
+    chown root log /proc/vmallocinfo
+    chmod 0440 /proc/vmallocinfo
+
+    #change permissions on kmsg & sysrq-trigger so bugreports can grab kthread stacks
+    chown root system /proc/kmsg
+    chmod 0440 /proc/kmsg
+    chown root system /proc/sysrq-trigger
+    chmod 0220 /proc/sysrq-trigger
+    
     
 # NFC configuration
     # Reset system time
@@ -219,12 +235,12 @@ on post-fs-data
     mkdir /data/ste_modem_panics 0770 system radio
  
     # bluetooth power up/down interface
-    write sys/class/rfkill/rfkill0/state 0
-    write sys/class/rfkill/rfkill0/type bluetooth
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    chmod 0664 /sys/class/rfkill/rfkill0/type
-    chmod 0664 /sys/class/rfkill/rfkill0/state
+    #write sys/class/rfkill/rfkill0/state 0
+    #write sys/class/rfkill/rfkill0/type bluetooth
+    #chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+    #chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    #chmod 0664 /sys/class/rfkill/rfkill0/type
+    #chmod 0664 /sys/class/rfkill/rfkill0/state
        
     # create logger folder
     mkdir /data/logger 0750 log log
@@ -250,13 +266,19 @@ on post-fs-data
     mkdir /data/tpapi/etc/tpa/persistent 2770 mot_tpapi mot_tpapi
     chown mot_tpapi mot_tpapi /data/tpapi/storage.bin
     chown mot_tpapi mot_tpapi /data/tpapi/user.bin
+
+# create special battd dir and set permissions
+    mkdir /data/tmp/battd 0770 root mot_accy
+    chmod 0770 /data/tmp/battd
+    chown root mot_accy /data/tmp/battd
+
 # directory for encryption management tool, enc_mgt_tool
     mkdir /data/emt 0770 root system
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_data_done 1
 
 # MTU for USB tethering
-    write /sys/class/net/gether0/mtu 1428
+ #   write /sys/class/net/gether0/mtu 1428
     
     
 on early-boot
@@ -299,10 +321,10 @@ on boot
     setprop ro.sys.atvc_allow_all_adb 1
     setprop ro.sys.atvc_allow_all_core 0
     setprop ro.sys.atvc_allow_efem 0
-    setprop ro.sys.atvc_allow_bp_log 1
-    setprop ro.sys.atvc_allow_ap_mot_log 1
+    setprop ro.sys.atvc_allow_bp_log 0
+    setprop ro.sys.atvc_allow_ap_mot_log 0
     setprop ro.sys.atvc_allow_simswap 0
-    setprop ro.sys.atvc_allow_gki_log 1
+    setprop ro.sys.atvc_allow_gki_log 0
 # OSH properties
     setprop sys.SystemMode RM_SM_MOBILE
     setprop sys.FbOwner 3
@@ -376,6 +398,11 @@ on boot
 # Change permissions for Enabling/Disabling CYTTSP4 IRQ
    chmod 0660 /sys/bus/i2c/drivers/cyttsp4-i2c/2-0067/drv_irq
    chmod 0660 /sys/bus/i2c/drivers/atmxt-i2c/2-004a/drv_irq
+# Change the ownership of cpcap
+   chmod 0666 /dev/cpcap
+   chmod 0666 /dev/cpcap_batt
+   chmod 0666 /dev/cpcap_mot_rtc
+   chmod 0666 /dev/cpcap_uc      
    # changes for enabling ducati...
    chmod 0660 /dev/syslink-proc4430
    chown media media /dev/syslink-proc4430
