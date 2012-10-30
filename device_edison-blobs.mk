@@ -76,7 +76,6 @@ PRODUCT_COPY_FILES += \
 
 # Phone settings
 PRODUCT_COPY_FILES += \
-    device/sample/etc/apns-conf_verizon.xml:system/etc/apns-conf.xml \
     vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml \
 
     

@@ -199,6 +199,9 @@ $(call inherit-product-if-exists, vendor/motorola/edison/edison-vendor.mk)
 
 $(call inherit-product-if-exists, vendor/google/gapps.mk)
 
+$(call inherit-product-if-exists, vendor/cm/config/gsm.mk)
+$(call inherit-product-if-exists, vendor/cm/config/common_full_phone.mk)
+
 # stuff common to all Motorola phones -- disabled for Sandbox
 #$(call inherit-product, device/motorola/common/common_hijack.mk)
 
