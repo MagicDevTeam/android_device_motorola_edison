@@ -68,7 +68,7 @@ PRODUCT_COPY_FILES += \
 	${bm_device}/bootmenu/binary/2nd-init:system/bootmenu/binary/2nd-init \
 	${bm_device}/bootmenu/binary/adbd.root:system/bootmenu/binary/adbd.root \
 	${bm_device}/bootmenu/binary/adbd:system/bootmenu/binary/adbd \
-	out/target/product/edison/utilities/busybox:system/bootmenu/binary/busybox \
+	${bm_device}/bootmenu/binary/busybox:system/bootmenu/binary/busybox \
 	${bm_device}/bootmenu/binary/lsof.static:system/bootmenu/binary/lsof \
 	${bm_device}/bootmenu/binary/bootmenu:system/bootmenu/binary/bootmenu \
 	${bm_device}/bootmenu/binary/recovery:system/bootmenu/binary/recovery
