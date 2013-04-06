@@ -20,6 +20,7 @@ PRODUCT_PACKAGES := \
 	libstagefrighthw \
         libI420colorconvert \
 	libtiutils \
+	libtiutils_custom \
 	libcamera \
 	libion \
 	libomxcameraadapter \

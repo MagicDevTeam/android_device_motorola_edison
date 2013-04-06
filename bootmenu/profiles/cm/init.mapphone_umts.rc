@@ -643,20 +643,20 @@ on property:persist.service.adb.enable=1
     start adbd
     
 # Power up to suspend
-on property:tcmd.suspend=1
-    stop surfaceflinger
-    stop media
-    stop zygote
+#on property:tcmd.suspend=1
+#    stop surfaceflinger
+#    stop media
+#    stop zygote
 # Normal to suspend
-on property:tcmd.suspend=2
-    stop surfaceflinger
-    stop media
-    stop zygote
+#on property:tcmd.suspend=2
+#    stop surfaceflinger
+#    stop media
+#    stop zygote
 # suspend to start services
-on property:tcmd.suspend=3
-    start surfaceflinger
-    start media
-    start zygote
+#on property:tcmd.suspend=3
+#    start surfaceflinger
+#    start media
+#    start zygote
 service tund /system/bin/tund
     class core
     socket tund stream 0660 vpn system
@@ -1050,13 +1050,13 @@ service aepls001 /system/bin/aepls001
     socket aepls001 stream 0666 system system
     user nobody
     group nobody
-on property:ro.bootmode=bp-tools
-    start tcmd
-    start gadget-qbp-modem
-    start gadget-qbp-diag
-    write /proc/sys/net/ipv4/ip_forward 1
-    start wrigley-diag
-    start logcatd-blan
+#on property:ro.bootmode=bp-tools
+#    start tcmd
+#    start gadget-qbp-modem
+#    start gadget-qbp-diag
+#    write /proc/sys/net/ipv4/ip_forward 1
+#    start wrigley-diag
+#    start logcatd-blan
 service JuniperVPNTools /system/bin/JuniperVPNTools
     class main
     user vpn
