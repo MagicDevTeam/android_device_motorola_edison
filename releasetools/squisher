@@ -159,9 +159,9 @@ fi
 if [ -z "$CYANOGEN_NIGHTLY" ]; then
 	MODVERSION=`sed -n -e'/ro\.modversion/s/^.*CyanogenMod-//p' $REPACK/ota/system/build.prop`
 	: ${MODVERSION:=nightly}
-	OUTFILE=$OUT/MagicMod-$MODVERSION-$TARGET_BUILD_FX-$BUILD_DATE-signed.zip
+	OUTFILE=$OUT/CM10-$MODVERSION-$TARGET_BUILD_FX-$BUILD_DATE-signed.zip
 else
-	OUTFILE=$OUT/MagicMod-$TARGET_BUILD_FX-$BUILD_DATE-squished.zip
+	OUTFILE=$OUT/CM10-$TARGET_BUILD_FX-$BUILD_DATE-squished.zip
 #	if [ "$TARGET_PRODUCT" = "cyanogen_edison" ]; then
 #		MODVERSION=`sed -n -e'/ro\.modversion/s/^.*CyanogenMod-//p' $REPACK/ota/system/build.prop`
 #		OUTFILE=$OUT/cm$MODVERSION.zip
