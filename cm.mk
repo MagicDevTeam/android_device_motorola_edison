@@ -1,4 +1,4 @@
-# Inherit device configuration for Droid Atrix 2.
+# Inherit device configuration for Atrix 2.
 $(call inherit-product, device/motorola/edison/full_edison.mk)
 
 # Inherit some common CM stuff.
@@ -11,7 +11,7 @@ PRODUCT_NAME := cm_edison
 PRODUCT_BRAND := ATT
 PRODUCT_DEVICE := edison
 PRODUCT_MODEL := MB865
-PRODUCT_MANUFACTURER := MOTO
+PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := MOTOROLA ATRIX 2
 PRODUCT_SFX := umts
 
