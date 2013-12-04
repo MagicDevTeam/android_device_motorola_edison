@@ -2,9 +2,15 @@ on init
 
 loglevel 8
 
+    # Create mountpoint so Dalvik can mark as slave in zygotes.
+    mount tmpfs tmpfs /storage mode=0050,uid=0,gid=1028
+
+    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
+
+    mkdir /storage/sdcard0 0700 root root
+
     export EXTERNAL_STORAGE /storage/sdcard0
 
-    mkdir /storage/sdcard0 0000 system system
     # for backwards compatibility
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
@@ -46,7 +52,6 @@ on post-fs
 
 # Create mountpoints and mount tmpfs
     mkdir /misc 0770 system misc
-    mkdir /sd-ext 0771 system system
     symlink /data/tmp /tmp
     mount tmpfs tmpfs /tmp
 
@@ -167,8 +172,6 @@ on post-fs
     insmod /system/lib/modules/wl12xx.ko
 on post-fs-data
     mkdir /data/tmp 0777 system system
-    chown system system /mnt/sdcard # Feature 34534
-    chmod 0777 /mnt/sdcard # Feature 34534
 #Set the default value for bluedroid_ref
     write /data/tmp/bluedroid_ref 0
     chown system system /data/tmp/bluedroid_ref
@@ -774,3 +777,8 @@ service wifi_calibrator /system/bin/sh /system/bin/wifical.sh
 on property:persist.wlan.ti.calibrated=0
     start wifi_calibrator
     setprop persist.wlan.ti.calibrated 1
+
+# fusewrapped external sdcard daemon running as media_rw (1023)
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+    class late_start
+    disabled

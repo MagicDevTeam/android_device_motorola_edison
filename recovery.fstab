@@ -5,4 +5,3 @@
 /data           ext3            /dev/block/userdata
 /cache          ext3            /dev/block/cache
 /systemorig     auto            /dev/block/systemorig
-
