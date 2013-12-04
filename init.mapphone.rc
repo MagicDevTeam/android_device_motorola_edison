@@ -33,7 +33,6 @@ loglevel 8
     chown system radio /sys/class/radio/mdm6600/command
 
 on fs
-    exec /sbin/fixboot.sh
     mount_all /fstab.mapphone_umts
 
 on post-fs
