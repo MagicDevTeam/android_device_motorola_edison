@@ -34,8 +34,6 @@ loglevel 8
 
 on fs
     mount_all /fstab.mapphone_umts
-    # kill green LED at boot
-    write /sys/class/leds/green/brightness 0
 
 on post-fs
 # Enable PVR modules
@@ -79,6 +77,9 @@ on post-fs
     # Configure kernel options
     # Disable automatic power control for OHCI USB IPC Temporarily
     #    write /sys/devices/platform/ohci-omap3/usb1/1-1/power/control auto
+
+    # kill green LED at boot
+    write /sys/class/leds/green/brightness 0
 
 # NFC configuration
     # Reset system time
@@ -172,6 +173,7 @@ on post-fs
     insmod /system/lib/modules/mac80211.ko
     insmod /system/lib/modules/wl12xx.ko
 on post-fs-data
+    mount rootfs rootfs / ro remount
     mkdir /data/tmp 0777 system system
 #Set the default value for bluedroid_ref
     write /data/tmp/bluedroid_ref 0
@@ -261,6 +263,9 @@ on early-boot
 # mount eCryptFS if required
     exec /system/bin/enc_mgt_tool
     class_start media_early_init
+
+    setprop vold.post_fs_data_done 1
+
 on boot
 # Define Motorola DBVC ATVC Property defaults (failsafe properties)
     setprop ro.sys.atvc_allow_netmon_usb 0
