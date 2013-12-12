@@ -1,4 +1,4 @@
-# Inherit device configuration for Droid Atrix 2.
+# Inherit device configuration for Atrix 2.
 $(call inherit-product, device/motorola/edison/full_edison.mk)
 
 # Inherit some common CM stuff.
@@ -14,10 +14,6 @@ PRODUCT_MODEL := MB865
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := MOTOROLA ATRIX 2
 PRODUCT_SFX := umts
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 960
-TARGET_SCREEN_WIDTH := 540
 
 UTC_DATE := $(shell date +%s)
 DATE := $(shell date +%Y%m%d)
