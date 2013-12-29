@@ -21,4 +21,6 @@
 
 #define BLE_INCLUDED TRUE
 
+#define BLE_INCLUDED TRUE
+
 #endif
